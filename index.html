@@ -695,7 +695,7 @@
             </p>
             
             <div class="cta-section">
-                <a href="https://glitchy.go2cloud.org/aff_c?offer_id=1520&aff_id=1359&source=xxx" 
+                <a href="https://glitchy.go2cloud.org/aff_c?offer_id=1520&aff_id=1359" 
                    class="cta-button" 
                    onclick="trackConversion();">
                     Download App
@@ -908,14 +908,14 @@
         </div>
     </div>
 
-    <div class="final-cta">
-        <div class="container">
+    <div class="container">
+        <div class="final-cta">
             <h2>
                 Ready to Test<br>
                 <span class="hero-highlight">Amazing Apps?</span>
             </h2>
             <p>Join our community of app testers today</p>
-            <a href="https://glitchy.go2cloud.org/aff_c?offer_id=1520&aff_id=1359&source=xxx" 
+            <a href="https://glitchy.go2cloud.org/aff_c?offer_id=1520&aff_id=1359" 
                class="cta-button" 
                onclick="trackConversion();">
                 Become a Tester
@@ -1043,22 +1043,7 @@
             }
         }
 
-        // Dynamic link source
-        function updateLinks() {
-            const path = window.location.pathname;
-            const pathSegments = path.split('/').filter(segment => segment);
-            
-            if (pathSegments.length > 0) {
-                const source = pathSegments[0].substring(0, 3).toLowerCase();
-                const links = document.querySelectorAll('a[href*="source="]');
-                links.forEach(link => {
-                    let href = link.getAttribute('href');
-                    href = href.replace(/source=[^&]*/, 'source=' + source);
-                    link.setAttribute('href', href);
-                });
-            }
-        }
-        updateLinks();
+        // Remove the updateLinks function since we're using static URLs now
     </script>
 </body>
 </html>
