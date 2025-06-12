@@ -15,8 +15,8 @@
         }
         
         :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
+            --primary: #ef4444;
+            --primary-dark: #dc2626;
             --secondary: #ec4899;
             --success: #10b981;
             --text-primary: #1a1a1a;
@@ -129,39 +129,13 @@
             text-decoration: none;
             border-radius: 10px;
             transition: all 0.2s;
-            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.25);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--primary));
-            border-radius: 10px;
-            opacity: 0;
-            z-index: -1;
-            transition: opacity 0.3s;
-            animation: shimmer 3s ease-in-out infinite;
-        }
-        
-        @keyframes shimmer {
-            0%, 100% { transform: translateX(-100%); }
-            50% { transform: translateX(100%); }
+            box-shadow: 0 4px 14px rgba(239, 68, 68, 0.25);
         }
 
         .cta-button:hover {
             background: var(--primary-dark);
             transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
-        }
-        
-        .cta-button:hover::before {
-            opacity: 1;
+            box-shadow: 0 6px 20px rgba(239, 68, 68, 0.3);
         }
 
         .hero-stats {
@@ -217,7 +191,7 @@
         .feature-icon {
             width: 56px;
             height: 56px;
-            background: rgba(99, 102, 241, 0.1);
+            background: rgba(239, 68, 68, 0.1);
             border-radius: 12px;
             margin: 0 auto 20px;
             display: flex;
@@ -316,7 +290,7 @@
         }
 
         .testimonial-stars {
-            color: #fbbf24;
+            color: #f59e0b;
             font-size: 18px;
             margin-bottom: 16px;
         }
@@ -424,7 +398,7 @@
         .final-cta {
             padding: 100px 0;
             text-align: center;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%);
         }
 
         .final-cta h2 {
@@ -563,8 +537,8 @@
                     <div class="hero-stat-label">App rating</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="hero-stat-number">$50-200</div>
-                    <div class="hero-stat-label">Monthly avg</div>
+                    <div class="hero-stat-number">500K+</div>
+                    <div class="hero-stat-label">Apps tested</div>
                 </div>
             </div>
         </div>
@@ -573,8 +547,8 @@
     <section class="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">As Seen on TikTok</h2>
-                <p class="section-subtitle">Join the viral testing community</p>
+                <h2 class="section-title">Why Choose TesterUp?</h2>
+                <p class="section-subtitle">Join the community of app testers</p>
             </div>
             
             <div class="features-grid">
@@ -586,12 +560,12 @@
                 <div class="feature-card">
                     <div class="feature-icon">💵</div>
                     <h3>Earn Rewards</h3>
-                    <p>Get paid for every test you complete. Choose from gift cards, prizes, or cash rewards delivered straight to you.</p>
+                    <p>Get rewards for every test you complete. Choose from gift cards, prizes, or other rewards for your valuable feedback.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
                     <h3>Quick & Easy</h3>
-                    <p>Most tests take just 5-15 minutes. Test on your schedule, from anywhere. Perfect for spare time earning.</p>
+                    <p>Most tests take just 5-15 minutes. Test on your schedule, from anywhere. Perfect for your spare time.</p>
                 </div>
             </div>
         </div>
@@ -601,7 +575,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">How It Works</h2>
-                <p class="section-subtitle">Start earning in minutes</p>
+                <p class="section-subtitle">Get started in minutes</p>
             </div>
             
             <div class="steps">
@@ -618,7 +592,7 @@
                 <div class="step">
                     <div class="step-number">3</div>
                     <h3>Test & Earn</h3>
-                    <p>Complete tests, share feedback, and earn rewards instantly.</p>
+                    <p>Complete tests, share feedback, and earn rewards for your contributions.</p>
                 </div>
             </div>
         </div>
@@ -645,7 +619,7 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Perfect side hustle! I test apps during my commute and lunch breaks. Easy money for something I'd do anyway."</p>
+                    <p class="testimonial-text">"Perfect side activity! I test apps during my commute and lunch breaks. Great way to discover new apps while earning rewards."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">MJ</div>
                         <div class="author-info">
@@ -656,7 +630,7 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"As a tech enthusiast, getting paid to try new apps is amazing. The platform is super user-friendly too."</p>
+                    <p class="testimonial-text">"As a tech enthusiast, testing new apps is perfect for me. The platform is super user-friendly and rewarding."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">EC</div>
                         <div class="author-info">
@@ -693,7 +667,7 @@
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Earnings vary based on test complexity and time required. Most testers earn $50-$200 per month testing apps in their spare time. Top testers can earn more by completing more tests.</p>
+                        <p>Earnings vary based on test complexity and time required. Testers earn rewards for completing app tests. The more tests you complete, the more you can earn.</p>
                     </div>
                 </div>
                 
@@ -709,11 +683,11 @@
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>How do I get paid?</span>
+                        <span>How do I get rewards?</span>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>You can redeem your earnings for gift cards from popular retailers, enter prize draws, or receive cash payments via PayPal or direct deposit once you reach the minimum threshold.</p>
+                        <p>You can redeem your earnings for gift cards from popular retailers, enter prize draws, or receive other rewards once you reach the minimum threshold.</p>
                     </div>
                 </div>
             </div>
@@ -723,7 +697,7 @@
     <section class="final-cta">
         <div class="container">
             <h2>Ready to Start Testing?</h2>
-            <p>Join millions earning rewards for their opinions</p>
+            <p>Join millions of testers making a difference</p>
             <a href="https://glitchy.go2cloud.org/aff_c?offer_id=1520&aff_id=1359" class="cta-button" onclick="trackConversion();">
                 Get Started Free
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -769,32 +743,21 @@
                 ttq.track('ClickButton', {
                     content_type: 'product',
                     content_id: 'testerup_app',
-                    content_name: 'App Tester Registration',
-                    value: 50.00, // High LTV signal
-                    currency: 'USD'
+                    content_name: 'App Tester Registration'
                 });
-                ttq.track('CompleteRegistration', {
-                    value: 50.00,
-                    currency: 'USD'
-                });
-                ttq.track('Subscribe', {
-                    value: 50.00,
-                    currency: 'USD',
-                    predicted_ltv: 150.00
-                });
+                ttq.track('CompleteRegistration');
+                ttq.track('Subscribe');
             }
             
             // Facebook
             if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead', {value: 50.00, currency: 'USD'});
+                fbq('track', 'Lead');
             }
             
             // Google
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'conversion', {
-                    'send_to': 'AW-CONVERSION_ID',
-                    'value': 50.00,
-                    'currency': 'USD'
+                    'send_to': 'AW-CONVERSION_ID'
                 });
             }
         }
@@ -851,27 +814,20 @@
             ttq.track('ViewContent', {
                 content_type: 'product',
                 content_id: 'testerup_app',
-                content_name: 'TesterUp App',
-                value: 0.10,
-                currency: 'USD'
+                content_name: 'TesterUp App'
             });
             
             // Track quality engagement
             setTimeout(() => {
                 ttq.track('AddToCart', {
                     content_type: 'product',
-                    content_id: 'testerup_app',
-                    value: 25.00,
-                    currency: 'USD'
+                    content_id: 'testerup_app'
                 });
             }, 5000);
             
             // High intent signal
             setTimeout(() => {
-                ttq.track('InitiateCheckout', {
-                    value: 50.00,
-                    currency: 'USD'
-                });
+                ttq.track('InitiateCheckout');
             }, 15000);
         }
     </script>
