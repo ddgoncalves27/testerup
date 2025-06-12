@@ -42,11 +42,7 @@
         /* Navigation */
         nav {
             padding: 20px 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            background: white;
             border-bottom: 1px solid var(--border);
         }
 
@@ -65,40 +61,6 @@
             background-clip: text;
         }
 
-        .momentum-bar {
-            background: var(--bg-light);
-            padding: 12px 0;
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 61px;
-            z-index: 90;
-        }
-        
-        .momentum-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            font-size: 13px;
-            color: var(--text-secondary);
-        }
-        
-        .momentum-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        .momentum-item .highlight {
-            color: var(--success);
-            font-weight: 600;
-        }
-        
-        .trending-up {
-            color: var(--success);
-            font-size: 16px;
-        }
-
         /* Hero Section */
         .hero {
             padding: 80px 0;
@@ -115,41 +77,7 @@
             border-radius: 30px;
             font-size: 13px;
             color: var(--success);
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        
-        .trust-indicators {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
             margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .trust-indicator {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
-        
-        .trust-indicator strong {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-        
-        .verified-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: #1DA1F2;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
             font-weight: 600;
         }
 
@@ -257,43 +185,6 @@
         .hero-stat-label {
             font-size: 14px;
             color: var(--text-secondary);
-        }
-
-        .social-proof-ticker {
-            background: linear-gradient(90deg, rgba(99, 102, 241, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%);
-            padding: 16px 0;
-            margin: 40px 0;
-            overflow: hidden;
-            border-radius: 12px;
-        }
-        
-        .ticker-track {
-            display: flex;
-            animation: ticker 30s linear infinite;
-        }
-        
-        @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        
-        .ticker-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 0 30px;
-            white-space: nowrap;
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
-        
-        .ticker-item .name {
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-        
-        .ticker-item .action {
-            color: var(--success);
         }
 
         /* Features */
@@ -616,26 +507,6 @@
                 font-size: 24px;
             }
             
-            .trust-indicators {
-                gap: 16px;
-                font-size: 13px;
-            }
-            
-            .momentum-bar {
-                top: 61px;
-                padding: 8px 0;
-            }
-            
-            .momentum-content {
-                font-size: 11px;
-                gap: 12px;
-            }
-            
-            .social-proof-ticker {
-                margin: 20px -20px;
-                border-radius: 0;
-            }
-            
             .features-grid,
             .testimonials-grid {
                 grid-template-columns: 1fr;
@@ -656,49 +527,12 @@
             </div>
         </div>
     </nav>
-    
-    <div class="momentum-bar">
-        <div class="container">
-            <div class="momentum-content">
-                <div class="momentum-item">
-                    <span class="trending-up">📈</span>
-                    <span><span class="highlight">+847</span> new testers today</span>
-                </div>
-                <div class="momentum-item">
-                    <span>🔥</span>
-                    <span>Trending #1 on TikTok</span>
-                </div>
-                <div class="momentum-item">
-                    <span>⚡</span>
-                    <span><span class="highlight">93%</span> spots filled</span>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <section class="hero">
         <div class="container">
             <div class="hero-badge">
                 <span class="dot"></span>
                 <span id="active-users">2,847 testers active now</span>
-            </div>
-            
-            <div class="trust-indicators">
-                <div class="trust-indicator">
-                    <span>⭐</span>
-                    <strong>4.8</strong>
-                    <span>(127K reviews)</span>
-                </div>
-                <div class="trust-indicator">
-                    <span>📱</span>
-                    <strong>3M+</strong>
-                    <span>downloads</span>
-                </div>
-                <div class="trust-indicator">
-                    <span>⏰</span>
-                    <strong>Limited time:</strong>
-                    <span id="timer">2:47 left</span>
-                </div>
             </div>
             
             <h1>
@@ -710,11 +544,7 @@
                 Join millions testing the latest apps and games. Share your feedback, help improve products, and get rewarded for your time.
             </p>
             
-            <div class="verified-badge">
-                ✓ Verified on TikTok Shop
-            </div>
-            
-            <div style="margin: 24px 0;">
+            <div style="margin: 40px 0;">
                 <a href="https://glitchy.go2cloud.org/aff_c?offer_id=1520&aff_id=1359" class="cta-button" onclick="trackConversion();">
                     Start Testing Now
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -725,62 +555,16 @@
             
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <div class="hero-stat-number">$2.4M</div>
-                    <div class="hero-stat-label">Paid to testers</div>
+                    <div class="hero-stat-number">3M+</div>
+                    <div class="hero-stat-label">Active testers</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="hero-stat-number">24hrs</div>
-                    <div class="hero-stat-label">Average payout</div>
+                    <div class="hero-stat-number">4.8★</div>
+                    <div class="hero-stat-label">App rating</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="hero-stat-number">#1</div>
-                    <div class="hero-stat-label">Testing app 2024</div>
-                </div>
-            </div>
-            
-            <div class="social-proof-ticker">
-                <div class="ticker-track">
-                    <div class="ticker-item">
-                        <span>🎉</span>
-                        <span><span class="name">@sarah_m</span> just earned <span class="action">$25</span></span>
-                    </div>
-                    <div class="ticker-item">
-                        <span>⚡</span>
-                        <span><span class="name">@mikejones22</span> completed <span class="action">10 tests</span></span>
-                    </div>
-                    <div class="ticker-item">
-                        <span>🔥</span>
-                        <span><span class="name">@emma.likes</span> reached <span class="action">Gold status</span></span>
-                    </div>
-                    <div class="ticker-item">
-                        <span>💰</span>
-                        <span><span class="name">@david_nyc</span> withdrew <span class="action">$150</span></span>
-                    </div>
-                    <div class="ticker-item">
-                        <span>🌟</span>
-                        <span><span class="name">@lisaaa</span> tested <span class="action">Netflix app</span></span>
-                    </div>
-                    <!-- Duplicate for seamless loop -->
-                    <div class="ticker-item">
-                        <span>🎉</span>
-                        <span><span class="name">@sarah_m</span> just earned <span class="action">$25</span></span>
-                    </div>
-                    <div class="ticker-item">
-                        <span>⚡</span>
-                        <span><span class="name">@mikejones22</span> completed <span class="action">10 tests</span></span>
-                    </div>
-                    <div class="ticker-item">
-                        <span>🔥</span>
-                        <span><span class="name">@emma.likes</span> reached <span class="action">Gold status</span></span>
-                    </div>
-                    <div class="ticker-item">
-                        <span>💰</span>
-                        <span><span class="name">@david_nyc</span> withdrew <span class="action">$150</span></span>
-                    </div>
-                    <div class="ticker-item">
-                        <span>🌟</span>
-                        <span><span class="name">@lisaaa</span> tested <span class="action">Netflix app</span></span>
-                    </div>
+                    <div class="hero-stat-number">$50-200</div>
+                    <div class="hero-stat-label">Monthly avg</div>
                 </div>
             </div>
         </div>
@@ -1025,21 +809,6 @@
         }
         setInterval(updateActiveUsers, 8000);
         
-        // Countdown timer
-        let timeLeft = 167; // 2:47 in seconds
-        function updateTimer() {
-            const minutes = Math.floor(timeLeft / 60);
-            const seconds = timeLeft % 60;
-            document.getElementById('timer').textContent = `${minutes}:${seconds.toString().padStart(2, '0')} left`;
-            
-            if (timeLeft > 0) {
-                timeLeft--;
-            } else {
-                timeLeft = 300; // Reset to 5 minutes
-            }
-        }
-        setInterval(updateTimer, 1000);
-        
         // Add urgency after scroll
         let scrollTracked = false;
         window.addEventListener('scroll', () => {
@@ -1073,18 +842,6 @@
             });
         });
 
-        // Dynamic trust updates
-        function updateTrustMetrics() {
-            // Update spots filled
-            const spotsElement = document.querySelector('.highlight:last-child');
-            if (spotsElement) {
-                const currentSpots = parseInt(spotsElement.textContent);
-                const newSpots = Math.min(99, currentSpots + Math.floor(Math.random() * 3));
-                spotsElement.textContent = newSpots + '%';
-            }
-        }
-        setInterval(updateTrustMetrics, 30000);
-
         // Minimal page tracking with TikTok trust signals
         if (typeof ttq !== 'undefined') {
             ttq.load('CBSCKIT3U3V1F1HQGVR0');
@@ -1117,39 +874,6 @@
                 });
             }, 15000);
         }
-
-        // Show join notification
-        setTimeout(() => {
-            const notification = document.createElement('div');
-            notification.style.cssText = `
-                position: fixed;
-                top: 80px;
-                right: 20px;
-                background: white;
-                border: 1px solid #e5e7eb;
-                border-radius: 8px;
-                padding: 12px 16px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-                font-size: 14px;
-                z-index: 1000;
-                opacity: 0;
-                transform: translateX(100%);
-                transition: all 0.3s ease;
-            `;
-            notification.innerHTML = '<strong>@jessica.t</strong> just joined from TikTok! 🎉';
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.style.opacity = '1';
-                notification.style.transform = 'translateX(0)';
-            }, 100);
-            
-            setTimeout(() => {
-                notification.style.opacity = '0';
-                notification.style.transform = 'translateX(100%)';
-                setTimeout(() => notification.remove(), 300);
-            }, 4000);
-        }, 8000);
     </script>
 
     <!-- TikTok Pixel -->
