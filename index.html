@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get Walmart shopping rewards. Quick surveys, real rewards for your Walmart shopping.">
+    <meta name="description" content="Get Venmo rewards. Quick surveys, real money sent to your Venmo account.">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0071dc">
+    <meta name="theme-color" content="#3D95CE">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://walmart-rewards.com/">
-    <meta property="og:title" content="Walmart Shopping Rewards">
-    <meta property="og:description" content="Earn Walmart shopping credit through quick activities.">
+    <meta property="og:url" content="https://venmo-rewards.com/">
+    <meta property="og:title" content="Venmo Money Rewards">
+    <meta property="og:description" content="Earn Venmo money through quick activities.">
     
-    <title>Walmart Shopping Rewards - Get Store Credit</title>
-    <link rel="canonical" href="https://walmart-rewards.com/">
+    <title>Venmo Rewards - Get Money Sent to Your Account</title>
+    <link rel="canonical" href="https://venmo-rewards.com/">
     
     <style>
         * {
@@ -48,7 +48,7 @@
         .logo {
             font-size: 28px;
             font-weight: 900;
-            color: #0071dc;
+            color: #3D95CE;
             letter-spacing: -0.5px;
         }
 
@@ -74,7 +74,7 @@
         }
 
         .highlight {
-            color: #0071dc;
+            color: #3D95CE;
         }
 
         .subtitle {
@@ -84,7 +84,48 @@
             line-height: 1.4;
         }
 
-        /* CTA Button - Made much more prominent */
+        /* Venmo Style Element */
+        .venmo-visual {
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto 40px;
+            padding: 24px;
+            background: linear-gradient(135deg, #3D95CE 0%, #2B7BAC 100%);
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 12px 32px rgba(61, 149, 206, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .venmo-visual::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(35deg);
+        }
+
+        .venmo-visual h2 {
+            color: white;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .venmo-visual p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* CTA Button */
         .cta-wrapper {
             text-align: center;
             margin: 40px 0;
@@ -93,7 +134,7 @@
         .cta-button {
             display: inline-block;
             padding: 20px 48px;
-            background: #0071dc;
+            background: #3D95CE;
             color: white;
             font-size: 20px;
             font-weight: 800;
@@ -103,7 +144,7 @@
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s;
-            box-shadow: 0 8px 24px rgba(0, 113, 220, 0.4);
+            box-shadow: 0 8px 24px rgba(61, 149, 206, 0.4);
             text-transform: uppercase;
             letter-spacing: 1px;
             position: relative;
@@ -130,8 +171,8 @@
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(0, 113, 220, 0.5);
-            background: #005bb5;
+            box-shadow: 0 12px 32px rgba(61, 149, 206, 0.5);
+            background: #2B7BAC;
         }
 
         .cta-arrow {
@@ -175,7 +216,7 @@
         .step-number {
             width: 32px;
             height: 32px;
-            background: #0071dc;
+            background: #3D95CE;
             color: white;
             border-radius: 50%;
             display: flex;
@@ -255,7 +296,7 @@
             font-size: 16px;
             font-weight: 700;
             margin-bottom: 6px;
-            color: #0071dc;
+            color: #3D95CE;
         }
 
         .faq-item p {
@@ -289,7 +330,7 @@
 
         .final-cta .cta-button {
             background: white;
-            color: #0071dc;
+            color: #3D95CE;
             box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
         }
 
@@ -314,7 +355,7 @@
         .trust-number {
             font-size: 28px;
             font-weight: 900;
-            color: #0071dc;
+            color: #3D95CE;
             display: block;
         }
 
@@ -368,26 +409,32 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <div class="logo">Walmart Rewards</div>
+            <div class="logo">Venmo Rewards</div>
         </div>
 
         <!-- Hero Section -->
         <div class="hero">
             <h1>
-                Get <span class="highlight">Massive</span> Walmart Shopping Rewards
+                Get <span class="highlight">Real Money</span> Sent to Your Venmo
             </h1>
             
             <p class="subtitle">
-                Complete simple tasks and earn valuable rewards for your Walmart shopping
+                Complete simple tasks and receive instant Venmo payments
             </p>
         </div>
 
-        <!-- CTA Button - Very prominent -->
+        <!-- Venmo Visual -->
+        <div class="venmo-visual">
+            <h2>Venmo Cash Rewards</h2>
+            <p>Direct to your account</p>
+        </div>
+
+        <!-- CTA Button -->
         <div class="cta-wrapper">
-            <a href="https://rewarduplevel.com/aff_c?offer_id=2572&aff_id=1359" class="cta-button">
-                Claim Your Reward <span class="cta-arrow">→</span>
+            <a href="https://rewarrdsgiant.com/aff_c?offer_id=2574&aff_id=1359" class="cta-button">
+                Claim Your Money <span class="cta-arrow">→</span>
             </a>
-            <p class="cta-subtext">No credit card required • Takes 2 minutes</p>
+            <p class="cta-subtext">No fees • Instant transfer • Takes 2 minutes</p>
         </div>
 
         <!-- Steps -->
@@ -396,21 +443,21 @@
                 <div class="step-number">1</div>
                 <div class="step-content">
                     <h3>Quick Sign Up</h3>
-                    <p>Takes less than 2 minutes - just basic information needed</p>
+                    <p>Simple registration - just need your Venmo username</p>
                 </div>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
                 <div class="step-content">
-                    <h3>Complete Activities</h3>
-                    <p>Answer surveys and share opinions about products you use</p>
+                    <h3>Complete Tasks</h3>
+                    <p>Easy surveys and activities that take minutes</p>
                 </div>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
                 <div class="step-content">
-                    <h3>Get Your Reward</h3>
-                    <p>Receive substantial Walmart shopping credit to use on anything</p>
+                    <h3>Get Paid Instantly</h3>
+                    <p>Money sent directly to your Venmo account</p>
                 </div>
             </div>
         </div>
@@ -418,79 +465,79 @@
         <!-- Trust Badges -->
         <div class="trust-badges">
             <div class="trust-badge">
-                <span class="trust-number">50K+</span>
-                <span class="trust-label">Happy Members</span>
+                <span class="trust-number">25K+</span>
+                <span class="trust-label">Paid Members</span>
             </div>
             <div class="trust-badge">
-                <span class="trust-number">Millions</span>
-                <span class="trust-label">In Rewards Given</span>
+                <span class="trust-number">Instant</span>
+                <span class="trust-label">Payments</span>
             </div>
             <div class="trust-badge">
-                <span class="trust-number">4.8★</span>
+                <span class="trust-number">4.9★</span>
                 <span class="trust-label">User Rating</span>
             </div>
         </div>
 
         <!-- Testimonials -->
         <div class="testimonials">
-            <h2 class="section-title">Real Members, Real Rewards</h2>
+            <h2 class="section-title">Real People, Real Payments</h2>
             
             <div class="testimonial">
                 <div class="rating">★★★★★</div>
-                <p class="testimonial-text">"I couldn't believe it was this easy! Got my reward and used it for groceries and household items. Saved me so much!"</p>
-                <p class="testimonial-author">Jennifer M. - Verified Member</p>
+                <p class="testimonial-text">"Got paid straight to my Venmo! Used it for dinner that same night. Super easy process."</p>
+                <p class="testimonial-author">Alex T. - Verified Member</p>
             </div>
             
             <div class="testimonial">
                 <div class="rating">★★★★★</div>
-                <p class="testimonial-text">"The process was straightforward and legitimate. Received my shopping credit quickly. Already recommended to friends!"</p>
-                <p class="testimonial-author">Robert K. - Active User</p>
+                <p class="testimonial-text">"I was skeptical but it's legit! Money showed up in my Venmo within hours. Already told my friends!"</p>
+                <p class="testimonial-author">Sarah L. - Active User</p>
             </div>
             
             <div class="testimonial">
                 <div class="rating">★★★★★</div>
-                <p class="testimonial-text">"Perfect for my shopping needs! The reward covered everything I wanted. So grateful for this opportunity!"</p>
-                <p class="testimonial-author">Maria S. - Happy Member</p>
+                <p class="testimonial-text">"Love getting Venmo money for simple tasks. It's perfect for extra spending cash!"</p>
+                <p class="testimonial-author">Mike R. - Happy Member</p>
             </div>
         </div>
 
         <!-- Another CTA -->
         <div class="cta-wrapper">
-            <a href="https://rewarduplevel.com/aff_c?offer_id=2572&aff_id=1359" class="cta-button">
-                Start Now <span class="cta-arrow">→</span>
+            <a href="https://rewarrdsgiant.com/aff_c?offer_id=2574&aff_id=1359" class="cta-button">
+                Start Earning <span class="cta-arrow">→</span>
             </a>
         </div>
 
         <!-- FAQ -->
         <div class="faq">
-            <h2 class="section-title">Common Questions</h2>
+            <h2 class="section-title">Frequently Asked Questions</h2>
             
             <div class="faq-item">
                 <h3>Is this really free?</h3>
-                <p>Yes! No credit card required. You earn rewards by completing simple activities like surveys and product reviews.</p>
+                <p>Yes! No fees, no charges. You earn money by completing simple tasks and surveys.</p>
             </div>
             
             <div class="faq-item">
-                <h3>How quickly do I get my reward?</h3>
-                <p>Most members receive their shopping credit within days after completing the required activities.</p>
+                <h3>How fast do I get paid?</h3>
+                <p>Most members receive their Venmo payment within a few hours of completing tasks.</p>
             </div>
             
             <div class="faq-item">
-                <h3>What can I buy with the credit?</h3>
-                <p>Use your shopping credit on anything at Walmart - groceries, electronics, clothing, home goods, and more!</p>
+                <h3>Do I need a Venmo account?</h3>
+                <p>Yes, you'll need an active Venmo account to receive your payments. It's free to sign up!</p>
             </div>
             
             <div class="faq-item">
-                <h3>Why are you giving away rewards?</h3>
-                <p>Companies value your opinions! They pay for market research, and we pass those rewards directly to you.</p>
+                <h3>Why do companies pay for this?</h3>
+                <p>Businesses need consumer feedback! They pay for your opinions and we send it to your Venmo.</p>
             </div>
         </div>
 
         <!-- Final CTA -->
         <div class="final-cta">
-            <h2>Join the Rewards Program</h2>
-            <p>Get valuable Walmart shopping credit today</p>
-            <a href="https://rewarduplevel.com/aff_c?offer_id=2572&aff_id=1359" class="cta-button">
+            <h2>Get Venmo Money Today</h2>
+            <p>Join thousands receiving cash payments</p>
+            <a href="https://rewarrdsgiant.com/aff_c?offer_id=2574&aff_id=1359" class="cta-button">
                 Get Started Now <span class="cta-arrow">→</span>
             </a>
         </div>
@@ -499,7 +546,7 @@
     <!-- Footer -->
     <footer>
         <p>
-            © 2025 Walmart Rewards Program • Independent Rewards Platform • Not affiliated with Walmart Inc.
+            © 2025 Venmo Rewards Program • Independent Rewards Platform • Not affiliated with Venmo/PayPal
             <br>
             <a href="/privacy">Privacy Policy</a> • 
             <a href="/terms">Terms of Service</a> • 
