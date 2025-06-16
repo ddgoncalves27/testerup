@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Top creators are giving you exclusive access to earn money testing games">
     <title>Testerup - Exclusive Access From Your Favorite Creators</title>
+    <link rel="icon" href="https://www.testerup.com/favicon.ico" type="image/x-icon">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1292126512914723');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1292126512914723&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
     
     <style>
         * {
@@ -55,15 +75,14 @@
         }
 
         .logo {
-            font-size: 42px;
-            font-weight: 900;
             margin-bottom: 50px;
-            letter-spacing: -0.03em;
             text-align: center;
-            background: linear-gradient(45deg, #DC2626, #EF4444);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        }
+
+        .logo img {
+            width: 200px;
+            height: auto;
+            max-width: 90%;
         }
 
         h1 {
@@ -130,46 +149,28 @@
             text-align: center;
         }
 
-        .cta-helper {
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.6);
-            margin-top: 16px;
+        .cta-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
         }
 
-        /* Stats Bar */
-        .stats-bar {
-            background: #FAFAFA;
-            padding: 60px 20px;
-            border-bottom: 1px solid #E5E5E5;
+        .cta-stat {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            text-align: center;
+        .cta-stat strong {
+            color: #DC2626;
+            font-weight: 600;
         }
 
-        .stat-item {
-            position: relative;
-        }
-
-        .stat-number {
-            font-size: 48px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #DC2626, #EF4444);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        .stat-label {
-            font-size: 16px;
-            color: #666;
-            font-weight: 500;
-        }
+        /* Stats Bar - Removed */
 
         /* Testimonials Section */
         .testimonials {
@@ -517,6 +518,11 @@
             .games-showcase {
                 grid-template-columns: 1fr;
             }
+
+            .cta-stats {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 </head>
@@ -524,7 +530,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="logo">TESTERUP</div>
+            <div class="logo">
+                <img src="https://www.testerup.com/themes/default/img/testery_com/logo-testerup-light.svg" alt="Testerup" />
+            </div>
             
             <h1>Top Creators Are Giving You A Real Way To Earn Money</h1>
             
@@ -534,10 +542,20 @@
             </p>
 
             <div class="cta-wrapper">
-                <a href="#" class="cta-button" onclick="handleCTA(event)">
+                <a href="https://track.zellfive.com/click" class="cta-button" onclick="handleCTA(event)">
                     Download Now
                 </a>
-                <p class="cta-helper">Available on iOS & Android • 100% Free</p>
+                <div class="cta-stats">
+                    <div class="cta-stat">
+                        <strong>312K+</strong> Active Testers
+                    </div>
+                    <div class="cta-stat">
+                        <strong>4.9★</strong> App Store Rating
+                    </div>
+                    <div class="cta-stat">
+                        <strong>24/7</strong> New Games Daily
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -569,26 +587,6 @@
         </div>
     </section>
 
-    <!-- Stats Bar -->
-    <section class="stats-bar">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">312K+</span>
-                    <span class="stat-label">Active Testers</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">4.9★</span>
-                    <span class="stat-label">App Store Rating</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">New Games Daily</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
@@ -609,8 +607,9 @@
                         </div>
                     </div>
                     <p class="testimonial-text">
-                        I'm giving my followers the chance to earn money with Testerup! 
-                        This is my gift to you - a real way to make income playing games. Don't waste this opportunity!
+                        omggg guys!! 😍 so i partnered with Testerup bc i wanted to give back to you all!! 
+                        like literally you can make money just playing games on your phone?? i tested it myself 
+                        and its actually legit 💯 love u guys sm, get that bag!! 💕
                     </p>
                 </div>
 
@@ -627,8 +626,9 @@
                         </div>
                     </div>
                     <p class="testimonial-text">
-                        I'm literally giving you the chance to earn money right now. 
-                        Testerup pays you to test games. This is my way of helping my audience make real income!
+                        I'm LITERALLY giving away the opportunity to make money RIGHT NOW. 
+                        No cap - Testerup pays you real money to test games. I've given away millions, 
+                        but THIS is how YOU can earn it yourself. Don't sleep on this!
                     </p>
                 </div>
 
@@ -645,8 +645,9 @@
                         </div>
                     </div>
                     <p class="testimonial-text">
-                        I'm giving all my followers access to earn money through Testerup! 
-                        This is your chance to make real money - I made sure you could get in!
+                        hey beautiful souls!! 🌟 okay so you guys know i only share things i genuinely believe in... 
+                        Testerup is IT! like you literally play games and get paid?? i made sure my followers 
+                        got exclusive access bc i love you guys!! go get your coins bestie 💗
                     </p>
                 </div>
 
@@ -663,8 +664,8 @@
                         </div>
                     </div>
                     <p class="testimonial-text">
-                        I'm giving you the opportunity to earn money. It's simple - 
-                        Testerup pays you to play games. This is for all my followers who need to make money!
+                        🤷‍♂️ Play games → Get money. Simple. No complicated stuff. 
+                        Just download Testerup and start earning. Why make it harder? 🎮💰
                     </p>
                 </div>
 
@@ -681,8 +682,9 @@
                         </div>
                     </div>
                     <p class="testimonial-text">
-                        I'm giving my audience the chance to earn real money! 
-                        Testerup is paying people to test games and I got you exclusive access!
+                        hiii my angels 🥺💖 okay soooo i got you guys something special!! Testerup is paying 
+                        ppl to test games and i was like my followers NEED this!! its giving financial freedom 
+                        vibes hehe 🎮✨ secure the bag babies!!
                     </p>
                 </div>
 
@@ -699,14 +701,15 @@
                         </div>
                     </div>
                     <p class="testimonial-text">
-                        This is my gift to my followers - I'm giving you the chance to earn money with Testerup! 
-                        Play games, get paid. I made this happen for you!
+                        Here's a magic trick: Download Testerup → Play games → Money appears in your account! ✨ 
+                        No editing tricks here, folks - this is real! I made sure my followers got special access 
+                        because you deserve to win too. Let's make some magic happen! 🎩💫
                     </p>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 60px;">
-                <a href="#" class="cta-button" onclick="handleCTA(event)">
+                <a href="https://track.zellfive.com/click" class="cta-button" onclick="handleCTA(event)">
                     Download Now
                 </a>
             </div>
@@ -746,11 +749,11 @@
             <p class="final-subheadline">
                 Your favorite creators want you to succeed. This is your chance.
             </p>
-            <a href="#" class="cta-button" style="background: white; color: #DC2626;" onclick="handleCTA(event)">
+            <a href="https://track.zellfive.com/click" class="cta-button" style="background: white; color: #DC2626;" onclick="handleCTA(event)">
                 Download Now
             </a>
             <p style="margin-top: 20px; opacity: 0.8;">
-                Limited spots available • 100% free to join
+                Limited spots available • Join 312K+ active testers
             </p>
         </div>
     </section>
@@ -766,13 +769,20 @@
     <script>
         function handleCTA(event) {
             event.preventDefault();
+            
+            // Fire Facebook Pixel AddToCart event
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'AddToCart');
+            }
+            
             const button = event.target;
-            button.textContent = 'Redirecting to App Store...';
+            const originalText = button.textContent;
+            button.textContent = 'Redirecting...';
             button.style.opacity = '0.8';
             
             setTimeout(() => {
-                window.location.href = '#'; // Replace with actual app store link
-            }, 800);
+                window.location.href = 'https://track.zellfive.com/click';
+            }, 500);
         }
     </script>
 </body>
