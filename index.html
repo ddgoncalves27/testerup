@@ -779,14 +779,8 @@
                 fbq('track', 'AddToCart');
             }
             
-            const button = event.target;
-            const originalText = button.textContent;
-            button.textContent = 'Redirecting...';
-            button.style.opacity = '0.8';
-            
-            setTimeout(() => {
-                window.location.href = 'https://track.zellfive.com/click';
-            }, 500);
+            // Redirect immediately
+            window.location.href = 'https://track.zellfive.com/click';
         }
     </script>
 </body>
