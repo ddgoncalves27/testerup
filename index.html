@@ -3,13 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Test apps and games for rewards - Join 312K+ testers providing feedback">
-    <title>Testerup - Test Apps & Games | Get Rewarded</title>
-    <link rel="icon" href="https://www.testerup.com/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#d97f5a">
+    <meta name="msapplication-navbutton-color" content="#d97f5a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>TesterUP - Start Earning Today</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1292126512914723');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1292126512914723&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-        
         * {
             margin: 0;
             padding: 0;
@@ -17,676 +38,634 @@
         }
 
         html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #a8583e 0%, #d97f5a 50%, #e89b7d 100%);
+            background-attachment: fixed;
+            background-size: cover;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
             overflow-x: hidden;
             overflow-y: auto;
         }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            background: #FFFFFF;
-            color: #000000;
-            line-height: 1.4;
-            overflow-x: hidden;
-            overflow-y: visible;
-            min-height: 100vh;
-        }
-
+        /* Main container */
         .container {
+            display: block;
+            max-width: 440px;
             width: 100%;
             margin: 0 auto;
-            padding: 0 20px;
-            text-align: center;
-            overflow: visible;
-        }
-
-        .header {
-            padding: 20px 0 16px;
-        }
-
-        .logo img {
-            max-width: 220px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .progress-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 12px 0;
-        }
-
-        .progress-dots {
-            display: flex;
-            align-items: center;
+            padding: 20px 20px 50px 20px;
             position: relative;
-        }
-
-        .dot {
-            width: 16px;
-            height: 16px;
-            background: #d5d5d5;
-            border-radius: 50%;
-            position: relative;
-            z-index: 2;
-        }
-
-        .dot.active {
-            background: #666;
-        }
-
-        .dot:first-child {
-            margin-right: 40px;
-        }
-
-        .progress-dots::before {
-            content: '';
-            position: absolute;
-            left: 8px;
-            right: 8px;
-            height: 2px;
-            background: #d5d5d5;
-            top: 50%;
-            transform: translateY(-50%);
             z-index: 1;
         }
 
-        .main-content {
-            padding: 15px 20px 30px;
-            overflow: visible;
-        }
-
-        .wave-emoji {
-            font-size: 46px;
+        /* Live notification */
+        .live-notification {
+            background: rgba(31, 41, 55, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 12px 16px;
             margin-bottom: 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            animation: slideDown 0.5s ease-out;
         }
 
-        .location-text {
-            font-size: 17px;
-            color: #666;
-            margin-bottom: 20px;
-            letter-spacing: 0.3px;
-            font-weight: 400;
+        @keyframes slideDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
-        .flag {
-            font-size: 20px;
-            margin-left: 8px;
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #34d399;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.2);
+            animation: pulse 2s infinite;
         }
 
-        h1 {
-            font-size: 68px;
-            font-weight: 900;
-            line-height: 0.9;
-            margin: 0 auto 20px;
-            letter-spacing: -2.5px;
-            text-transform: uppercase;
-            color: #000;
-            font-family: 'Inter', Arial Black, sans-serif;
+        @keyframes pulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.2);
+            }
+            50% { 
+                transform: scale(1.1);
+                box-shadow: 0 0 0 6px rgba(52, 211, 153, 0.1);
+            }
         }
 
-        .description {
-            font-size: 19px;
-            line-height: 1.4;
-            color: #4a4a4a;
-            margin-bottom: 22px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 400;
+        .notification-text {
+            font-size: 13px;
+            color: #f3f4f6;
+            font-weight: 500;
+            flex: 1;
         }
 
-        .emoji-accent {
-            font-size: 30px;
-            margin: 15px 0 20px;
+        .notification-highlight {
+            color: #34d399;
+            font-weight: 600;
         }
 
-        .cta-button {
-            display: block;
-            width: calc(100% - 40px);
-            max-width: 600px;
-            margin: 25px auto 30px;
-            background: #DC2626;
-            color: #FFFFFF;
-            padding: 30px 40px;
-            font-size: 30px;
-            font-weight: 900;
-            text-decoration: none;
-            border-radius: 16px;
-            transition: all 0.15s ease;
-            letter-spacing: -1px;
-            font-family: 'Inter', Arial Black, -apple-system, BlinkMacSystemFont, sans-serif;
+        /* Logo section */
+        .logo-section {
             text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: #ffffff;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        /* Progress section */
+        .progress-section {
+            background: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .progress-title {
+            font-size: 32px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 12px;
+            color: #ef4444;
+        }
+
+        .progress-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            height: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #ef4444, #f87171);
+            height: 100%;
+            width: 25%;
+            border-radius: 50px;
+            transition: width 3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+        }
+
+        .progress-text {
+            font-size: 14px;
+            color: #e5e7eb;
+            text-align: center;
+        }
+
+        /* Main content card */
+        .main-card {
+            background: rgba(31, 41, 55, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            display: block;
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Main heading */
+        .main-heading {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        /* Steps section */
+        .steps-section {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .step-icon {
+            width: 24px;
+            height: 24px;
+            background: #ef4444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .step-icon svg {
+            width: 14px;
+            height: 14px;
+            color: white;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .step-subtitle {
+            font-size: 13px;
+            color: #e5e7eb;
+            line-height: 1.4;
+        }
+
+        .step-subtitle-muted {
+            font-size: 12px;
+            color: #cbd5e1;
+            margin-top: 2px;
+        }
+
+        /* Pro tip section */
+        .pro-tip {
+            background: rgba(251, 191, 36, 0.15);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .pro-tip-icon {
+            font-size: 16px;
+            margin-top: 2px;
+        }
+
+        .pro-tip-content {
+            flex: 1;
+        }
+
+        .pro-tip-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: #fbbf24;
+            margin-bottom: 2px;
+        }
+
+        .pro-tip-text {
+            font-size: 13px;
+            color: #fef3c7;
+            line-height: 1.4;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            background: #ef4444;
+            color: #ffffff;
             border: none;
+            padding: 18px 40px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(239, 68, 68, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0 0 20px 0;
             position: relative;
-            line-height: 1;
-            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.25);
-            text-transform: none;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            background: #B91C1C;
-            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.3);
+            box-shadow: 0 15px 50px rgba(239, 68, 68, 0.5);
+            background: #dc2626;
         }
 
-        .arrow {
-            display: inline-block;
-            margin-left: 20px;
-            font-size: 34px;
-            transition: transform 0.15s ease;
-            font-weight: 400;
-            line-height: 0;
-            position: relative;
-            top: 2px;
+        .cta-button:active {
+            transform: translateY(0);
         }
 
-        .cta-button:hover .arrow {
-            transform: translateX(7px);
-        }
-
-        .rating-section {
-            margin-top: 25px;
-            padding-bottom: 10px;
-        }
-
-        .stars {
-            color: #FFB800;
-            font-size: 17px;
-            margin-bottom: 5px;
-            letter-spacing: 2px;
-        }
-
-        .rating-text {
-            color: #666;
-            font-size: 14px;
-            font-weight: 400;
-        }
-
-        .influencer-section {
-            margin-top: 45px;
-            padding: 50px 20px 45px;
-            overflow: visible;
-            background: linear-gradient(to bottom, #FAFAFA 0%, #FFFFFF 100%);
-            position: relative;
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
-        }
-
-        .influencer-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 2px;
-            background: #DC2626;
-            border-radius: 1px;
-        }
-
-        .section-decoration {
-            font-size: 28px;
-            margin-bottom: 12px;
-            color: #DC2626;
-            font-weight: 700;
-        }
-
-        .promoted-title {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: #222;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        .influencer-subtitle {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 32px;
-            font-weight: 400;
-            letter-spacing: 0.2px;
-        }
-
-        .influencer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
-            gap: 22px 18px;
-            margin-bottom: 10px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 10px 15px;
-            overflow: visible;
-        }
-
-        .influencer-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 8px;
-            transition: transform 0.2s ease;
-            cursor: pointer;
-            padding: 8px 4px;
-            overflow: visible;
-        }
-
-        .influencer-item:hover {
-            transform: translateY(-2px);
-        }
-
-        @media (hover: none) {
-            .influencer-item:hover {
-                transform: none;
-            }
-        }
-
-        .influencer-avatar-wrapper {
-            position: relative;
-            width: 62px;
-            height: 62px;
-            overflow: visible;
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .influencer-photo {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 2px solid #f5f5f5;
-            object-fit: cover;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-            transition: all 0.2s ease;
-        }
-
-        .influencer-item:hover .influencer-photo {
-            transform: scale(1.03);
-        }
-
-        @media (hover: none) {
-            .influencer-item:hover .influencer-photo {
-                transform: none;
-            }
-        }
-
-        .verified-check {
-            position: absolute;
-            top: -7px;
-            right: -7px;
-            width: 22px;
-            height: 22px;
-            background: white;
-            border-radius: 50%;
-            padding: 1px;
-            z-index: 1;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease;
-        }
-
-        .influencer-item:hover .verified-check {
-            transform: scale(1.1);
-        }
-
-        .influencer-name {
-            font-size: 11px;
-            color: #666;
+        /* Security badge */
+        .security-badge {
             text-align: center;
-            font-weight: 600;
-            line-height: 1.2;
-            width: 100%;
-            word-wrap: break-word;
+            font-size: 13px;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin: 10px 0;
+            padding: 0;
         }
 
-        @media (min-width: 1400px) {
-            .container {
-                padding: 0 60px;
-            }
-            
-            h1 {
-                font-size: 80px;
-            }
-            
-            .description {
-                max-width: 900px;
-                font-size: 21px;
-            }
-            
-            .influencer-grid {
-                max-width: 1400px;
-                gap: 30px 25px;
-            }
+        .security-icon {
+            width: 14px;
+            height: 14px;
         }
 
-        @media (max-width: 768px) {
+        /* Mobile specific adjustments */
+        @media (max-height: 700px) {
             .container {
-                padding: 0 15px;
+                padding: 15px 15px 40px 15px;
             }
-            
-            .header {
-                padding: 16px 0 12px;
+
+            .live-notification {
+                padding: 10px 14px;
+                margin-bottom: 15px;
             }
-            
+
+            .logo {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 15px;
+            }
+
             .logo img {
-                max-width: 180px;
-            }
-            
-            h1 {
-                font-size: 40px;
-                letter-spacing: -1.5px;
-                line-height: 0.9;
+                width: 44px;
+                height: 44px;
             }
 
-            .cta-button {
+            .progress-section {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .progress-title {
                 font-size: 26px;
-                padding: 26px 30px;
-                width: calc(100% - 30px);
-                margin: 20px auto 25px;
-                letter-spacing: -0.8px;
-            }
-            
-            .arrow {
-                font-size: 30px;
-                margin-left: 16px;
-            }
-            
-            .description {
-                font-size: 16px;
-                max-width: 100%;
-                padding: 0 10px;
-            }
-            
-            .location-text {
-                font-size: 15px;
-            }
-            
-            .wave-emoji {
-                font-size: 38px;
-                margin-bottom: 18px;
-            }
-            
-            .emoji-accent {
-                font-size: 26px;
-            }
-
-            .influencer-section {
-                padding: 40px 15px 35px;
-                margin-top: 35px;
-            }
-
-            .influencer-section::before {
-                width: 40px;
-            }
-
-            .section-decoration {
-                font-size: 24px;
+                font-weight: 800;
+                color: #ef4444;
                 margin-bottom: 10px;
             }
 
-            .promoted-title {
+            .main-card {
+                padding: 15px;
+            }
+
+            .main-heading {
                 font-size: 18px;
-                margin-bottom: 6px;
+                margin-bottom: 25px;
             }
 
-            .influencer-subtitle {
-                font-size: 14px;
-                margin-bottom: 22px;
+            .steps-section {
+                gap: 10px;
+                margin-bottom: 20px;
             }
 
-            .influencer-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 20px 10px;
-                padding: 0 15px;
+            .pro-tip {
+                padding: 10px;
+                margin-bottom: 15px;
             }
 
-            .influencer-avatar-wrapper {
-                width: 55px;
-                height: 55px;
-            }
-
-            .verified-check {
-                width: 18px;
-                height: 18px;
-                top: -5px;
-                right: -5px;
-                padding: 0.5px;
-            }
-
-            .influencer-item {
-                padding: 6px 0;
-                gap: 6px;
-            }
-
-            .influencer-name {
-                font-size: 10px;
-                line-height: 1.2;
+            .cta-button {
+                padding: 16px 32px;
+                font-size: 15px;
+                margin-bottom: 15px;
             }
         }
 
-        @media (max-width: 360px) {
-            .container {
-                padding: 0 10px;
-            }
-            
-            .logo img {
-                max-width: 150px;
-            }
-            
-            .cta-button {
+        /* Very small screens */
+        @media (max-height: 600px) {
+            .progress-title {
                 font-size: 22px;
-                padding: 22px 25px;
-                letter-spacing: -0.5px;
-            }
-            
-            .arrow {
-                font-size: 26px;
-                margin-left: 12px;
+                font-weight: 800;
+                color: #ef4444;
             }
 
-            .influencer-grid {
-                gap: 15px 8px;
-                padding: 0 10px;
+            .logo {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 10px;
             }
 
-            .influencer-avatar-wrapper {
-                width: 45px;
-                height: 45px;
+            .logo img {
+                width: 36px;
+                height: 36px;
             }
 
-            .verified-check {
-                width: 16px;
-                height: 16px;
-                top: -3px;
-                right: -3px;
+            .main-heading {
+                font-size: 16px;
+                margin-bottom: 20px;
             }
 
-            .influencer-name {
-                font-size: 9px;
+            .step-title {
+                font-size: 14px;
             }
 
-            .influencer-item {
-                padding: 5px 0;
+            .step-subtitle {
+                font-size: 12px;
+            }
+
+            .cta-button {
+                padding: 14px 28px;
+                font-size: 14px;
+            }
+        }
+
+        /* Focus styles */
+        .cta-button:focus {
+            outline: 3px solid rgba(239, 68, 68, 0.5);
+            outline-offset: 2px;
+        }
+        
+        /* Touch device fix */
+        @media (hover: none) and (pointer: coarse) {
+            body {
+                background-attachment: scroll;
+            }
+        }
+        
+        /* iOS specific fix */
+        @supports (-webkit-touch-callout: none) {
+            body {
+                background-attachment: scroll;
             }
         }
     </style>
 </head>
 <body>
-    <script>
-        function getSourceCode() {
-            const hostname = window.location.hostname;
-            const pathname = window.location.pathname;
-            let sourceCode = 'xxx';
-            
-            const pathSegments = pathname.split('/').filter(segment => segment);
-            if (pathSegments.length > 0 && pathSegments[0].length >= 3) {
-                sourceCode = pathSegments[0].substring(0, 3).toLowerCase();
-            }
-            else {
-                const subdomainMatch = hostname.split('.');
-                if (subdomainMatch.length > 2 && subdomainMatch[0].length >= 3) {
-                    sourceCode = subdomainMatch[0].substring(0, 3).toLowerCase();
-                }
-            }
-            
-            return sourceCode;
-        }
-        
-        function updateCTALinks() {
-            const sourceCode = getSourceCode();
-            const baseURL = 'https://rewarrdsgiant.com/aff_c?offer_id=2414&aff_id=1359&source=';
-            const newURL = baseURL + sourceCode;
-            
-            const ctaButtons = document.querySelectorAll('.cta-button');
-            ctaButtons.forEach(button => {
-                button.href = newURL;
-            });
-        }
-        
-        document.addEventListener('DOMContentLoaded', updateCTALinks);
-    </script>
-
     <div class="container">
-        <header class="header">
-            <div class="logo">
-                <img src="https://support.testerup.com/hc/theming_assets/01HZPRF677TRQ3BZBJ7TX0TYX4" alt="Testerup" />
-            </div>
-        </header>
+        <!-- Live notification -->
+        <div class="live-notification" id="liveNotification">
+            <span class="live-dot"></span>
+            <span class="notification-text">
+                <span class="notification-highlight">Noah1997</span> bought $5 in Coin Pop spins and made <span class="notification-highlight">$120</span> ~ 28 minutes ago
+            </span>
+        </div>
 
-        <div class="progress-container">
-            <div class="progress-dots">
-                <div class="dot active"></div>
-                <div class="dot"></div>
+        <!-- Logo section -->
+        <div class="logo-section">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoVmKYO0ckcFX9C4SiKZPhjE6x5g2KKvV_6TFEXE2HbA&s" alt="TesterUP">
             </div>
         </div>
 
-        <main class="main-content">
-            <div class="wave-emoji">👋</div>
-            
-            <div class="location-text">
-                AVAILABLE FOR TESTERS IN: <span class="flag">🇺🇸</span>
+        <!-- Progress section -->
+        <div class="progress-section">
+            <h2 class="progress-title">TesterUP</h2>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
             </div>
+            <p class="progress-text">Complete setup to unlock your earning potential</p>
+        </div>
 
-            <h1>JOIN OUR TESTING COMMUNITY</h1>
+        <!-- Main card -->
+        <div class="main-card">
+            <!-- Main heading -->
+            <h1 class="main-heading">Follow the instructions to start earning today!</h1>
 
-            <p class="description">
-                Test exciting apps and games. Share your feedback. Get rewarded. 
-                Join 312K+ testers who are helping shape the future of digital products 
-                while earning extra income. Ready to start testing?
-            </p>
+            <!-- Steps section -->
+            <div class="steps-section">
+                <div class="step">
+                    <div class="step-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-title">Download the TesterUp app</div>
+                        <div class="step-subtitle">(Click the button below)</div>
+                    </div>
+                </div>
 
-            <div class="emoji-accent">🚀 🎮</div>
+                <div class="step">
+                    <div class="step-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-title">Pick your favorite 3-5 games and level up</div>
+                        <div class="step-subtitle">(Make $700+/day by leveling up in at least 2 games daily)</div>
+                    </div>
+                </div>
 
-            <a href="https://rewarrdsgiant.com/aff_c?offer_id=2414&aff_id=1359&source=xxx" class="cta-button">
-                Start Testing <span class="arrow">→</span>
-            </a>
-
-            <div class="rating-section">
-                <div class="stars">★★★★★</div>
-                <div class="rating-text">4.9 stars out of 6,266 reviews</div>
-            </div>
-
-            <div class="influencer-section">
-                <div class="section-decoration">✓</div>
-                <h2 class="promoted-title">Trusted By</h2>
-                <p class="influencer-subtitle">Recommended by influencers with millions of followers</p>
-                <div class="influencer-grid">
-                    <div class="influencer-item">
-                        <div class="influencer-avatar-wrapper">
-                            <img class="influencer-photo" src="https://inflownetwork.com/wp-content/uploads/2021/05/James-Charles-and-The-Never-Ending-Scandals.jpg" alt="James Charles" />
-                            <svg class="verified-check" viewBox="0 0 24 24" fill="none">
-                                <path d="M22.5 12.5C22.5 10.92 21.625 9.55 20.352 8.9C20.547 8.172 20.492 7.375 20.117 6.617C19.742 5.86 19.102 5.273 18.344 4.977C18.203 4.203 17.766 3.492 17.078 3.008C16.391 2.524 15.547 2.329 14.742 2.447C14.18 1.711 13.38 1.25 12.5 1.25C11.62 1.25 10.82 1.711 10.258 2.447C9.453 2.329 8.609 2.524 7.922 3.008C7.234 3.492 6.797 4.203 6.656 4.977C5.898 5.273 5.258 5.86 4.883 6.617C4.508 7.375 4.453 8.172 4.648 8.9C3.375 9.55 2.5 10.92 2.5 12.5C2.5 14.08 3.375 15.45 4.648 16.1C4.453 16.828 4.508 17.625 4.883 18.383C5.258 19.14 5.898 19.727 6.656 20.023C6.797 20.797 7.234 21.508 7.922 21.992C8.609 22.476 9.453 22.671 10.258 22.553C10.82 23.289 11.62 23.75 12.5 23.75C13.38 23.75 14.18 23.289 14.742 22.553C15.547 22.671 16.391 22.476 17.078 21.992C17.766 21.508 18.203 20.797 18.344 20.023C19.102 19.727 19.742 19.14 20.117 18.383C20.492 17.625 20.547 16.828 20.352 16.1C21.625 15.45 22.5 14.08 22.5 12.5Z" fill="#00A8E8"/>
-                                <path d="M11.375 15.375L8.625 12.625L9.875 11.375L11.375 12.875L15.125 9.125L16.375 10.375L11.375 15.375Z" fill="white"/>
-                            </svg>
-                        </div>
-                        <span class="influencer-name">James Charles</span>
+                <div class="step">
+                    <div class="step-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
                     </div>
-                    <div class="influencer-item">
-                        <div class="influencer-avatar-wrapper">
-                            <img class="influencer-photo" src="https://www.cameo.com/cdn-cgi/image/fit=cover,format=auto,width=500,height=500/https://cdn.cameo.com/resizer/static/user/UOUwWJDpz-B4D2CCE3-DBBC-44EE-B2CB-A80E81F10AD8.jpg" alt="Lucas & Marcus" />
-                            <svg class="verified-check" viewBox="0 0 24 24" fill="none">
-                                <path d="M22.5 12.5C22.5 10.92 21.625 9.55 20.352 8.9C20.547 8.172 20.492 7.375 20.117 6.617C19.742 5.86 19.102 5.273 18.344 4.977C18.203 4.203 17.766 3.492 17.078 3.008C16.391 2.524 15.547 2.329 14.742 2.447C14.18 1.711 13.38 1.25 12.5 1.25C11.62 1.25 10.82 1.711 10.258 2.447C9.453 2.329 8.609 2.524 7.922 3.008C7.234 3.492 6.797 4.203 6.656 4.977C5.898 5.273 5.258 5.86 4.883 6.617C4.508 7.375 4.453 8.172 4.648 8.9C3.375 9.55 2.5 10.92 2.5 12.5C2.5 14.08 3.375 15.45 4.648 16.1C4.453 16.828 4.508 17.625 4.883 18.383C5.258 19.14 5.898 19.727 6.656 20.023C6.797 20.797 7.234 21.508 7.922 21.992C8.609 22.476 9.453 22.671 10.258 22.553C10.82 23.289 11.62 23.75 12.5 23.75C13.38 23.75 14.18 23.289 14.742 22.553C15.547 22.671 16.391 22.476 17.078 21.992C17.766 21.508 18.203 20.797 18.344 20.023C19.102 19.727 19.742 19.14 20.117 18.383C20.492 17.625 20.547 16.828 20.352 16.1C21.625 15.45 22.5 14.08 22.5 12.5Z" fill="#00A8E8"/>
-                                <path d="M11.375 15.375L8.625 12.625L9.875 11.375L11.375 12.875L15.125 9.125L16.375 10.375L11.375 15.375Z" fill="white"/>
-                            </svg>
-                        </div>
-                        <span class="influencer-name">Lucas & Marcus</span>
-                    </div>
-                    <div class="influencer-item">
-                        <div class="influencer-avatar-wrapper">
-                            <img class="influencer-photo" src="https://yt3.googleusercontent.com/7QnpPqeHqvT62fzS5Sod1D73L8jkgb01WZqV8M5iQSj4aNgev6NVLZe4LqNAydaiAfUScRcB1Q=s900-c-k-c0x00ffffff-no-rj" alt="Brooke Monk" />
-                            <svg class="verified-check" viewBox="0 0 24 24" fill="none">
-                                <path d="M22.5 12.5C22.5 10.92 21.625 9.55 20.352 8.9C20.547 8.172 20.492 7.375 20.117 6.617C19.742 5.86 19.102 5.273 18.344 4.977C18.203 4.203 17.766 3.492 17.078 3.008C16.391 2.524 15.547 2.329 14.742 2.447C14.18 1.711 13.38 1.25 12.5 1.25C11.62 1.25 10.82 1.711 10.258 2.447C9.453 2.329 8.609 2.524 7.922 3.008C7.234 3.492 6.797 4.203 6.656 4.977C5.898 5.273 5.258 5.86 4.883 6.617C4.508 7.375 4.453 8.172 4.648 8.9C3.375 9.55 2.5 10.92 2.5 12.5C2.5 14.08 3 at 15.45 4.648 16.1C4.453 16.828 4.508 17.625 4.883 18.383C5.258 19.14 5.898 19.727 6.656 20.023C6.797 20.797 7.234 21.508 7.922 21.992C8.609 22.476 9.453 22.671 10.258 22.553C10.82 23.289 11.62 23.75 12.5 23.75C13.38 23.75 14.18 23.289 14.742 22.553C15.547 22.671 16.391 22.476 17.078 21.992C17.766 21.508 18.203 20.797 18.344 20.023C19.102 19.727 19.742 19.14 20.117 18.383C20.492 17.625 20.547 16.828 20.352 16.1C21.625 15.45 22.5 14.08 22.5 12.5Z" fill="#00A8E8"/>
-                                <path d="M11.375 15.375L8.625 12.625L9.875 11.375L11.375 12.875L15.125 9.125L16.375 10.375L11.375 15.375Z" fill="white"/>
-                            </svg>
-                        </div>
-                        <span class="influencer-name">Brooke Monk</span>
-                    </div>
-                    <div class="influencer-item">
-                        <div class="influencer-avatar-wrapper">
-                            <img class="influencer-photo" src="https://www.rollingstone.com/wp-content/uploads/2024/07/liza-koshy-family-affair-interview.jpg?w=1581&h=1054&crop=1" alt="Liza Koshy" />
-                            <svg class="verified-check" viewBox="0 0 24 24" fill="none">
-                                <path d="M22.5 12.5C22.5 10.92 21.625 9.55 20.352 8.9C20.547 8.172 20.492 7.375 20.117 6.617C19.742 5.86 19.102 5.273 18.344 4.977C18.203 4.203 17.766 3.492 17.078 3.008C16.391 2.524 15.547 2.329 14.742 2.447C14.18 1.711 13.38 1.25 12.5 1.25C11.62 1.25 10.82 1.711 10.258 2.447C9.453 2.329 8.609 2.524 7.922 3.008C7.234 3.492 6.797 4.203 6.656 4.977C5.898 5.273 5.258 5.86 4.883 6.617C4.508 7.375 4.453 8.172 4.648 8.9C3.375 9.55 2.5 10.92 2.5 12.5C2.5 14.08 3.375 15.45 4.648 16.1C4.453 16.828 4.508 17.625 4.883 18.383C5.258 19.14 5.898 19.727 6.656 20.023C6.797 20.797 7.234 21.508 7.922 21.992C8.609 22.476 9.453 22.671 10.258 22.553C10.82 23.289 11.62 23.75 12.5 23.75C13.38 23.75 14.18 23.289 14.742 22.553C15.547 22.671 16.391 22.476 17.078 21.992C17.766 21.508 18.203 20.797 18.344 20.023C19.102 19.727 19.742 19.14 20.117 18.383C20.492 17.625 20.547 16.828 20.352 16.1C21.625 15.45 22.5 14.08 22.5 12.5Z" fill="#00A8E8"/>
-                                <path d="M11.375 15.375L8.625 12.625L9.875 11.375L11.375 12.875L15.125 9.125L16.375 10.375L11.375 15.375Z" fill="white"/>
-                            </svg>
-                        </div>
-                        <span class="influencer-name">Liza Koshy</span>
-                    </div>
-                    <div class="influencer-item">
-                        <div class="influencer-avatar-wrapper">
-                            <img class="influencer-photo" src="https://leaders.com/wp-content/uploads/2023/02/Copy-of-Database-bio-profile-pic-69.png" alt="Savannah LaBrant" />
-                            <svg class="verified-check" viewBox="0 0 24 24" fill="none">
-                                <path d="M22.5 12.5C22.5 10.92 21.625 9.55 20.352 8.9C20.547 8.172 20.492 7.375 20.117 6.617C19.742 5.86 19.102 5.273 18.344 4.977C18.203 4.203 17.766 3.492 17.078 3.008C16.391 2.524 15.547 2.329 14.742 2.447C14.18 1.711 13.38 1.25 12.5 1.25C11.62 1.25 10.82 1.711 10.258 2.447C9.453 2.329 8.609 2.524 7.922 3.008C7.234 3.492 6.797 4.203 6.656 4.977C5.898 5.273 5.258 5.86 4.883 6.617C4.508 7.375 4.453 8.172 4.648 8.9C3.375 9.55 2.5 10.92 2.5 12.5C2.5 14.08 3.375 15.45 4.648 16.1C4.453 16.828 4.508 17.625 4.883 18.383C5.258 19.14 5.898 19.727 6.656 20.023C6.797 20.797 7.234 21.508 7.922 21.992C8.609 22.476 9.453 22.671 10.258 22.553C10.82 23.289 11.62 23.75 12.5 23.75C13.38 23.75 14.18 23.289 14.742 22.553C15.547 22.671 16.391 22.476 17.078 21.992C17.766 21.508 18.203 20.797 18.344 20.023C19.102 19.727 19.742 19.14 20.117 18.383C20.492 17.625 20.547 16.828 20.352 16.1C21.625 15.45 22.5 14.08 22.5 12.5Z" fill="#00A8E8"/>
-                                <path d="M11.375 15.375L8.625 12.625L9.875 11.375L11.375 12.875L15.125 9.125L16.375 10.375L11.375 15.375Z" fill="white"/>
-                            </svg>
-                        </div>
-                        <span class="influencer-name">Savannah LaBrant</span>
-                    </div>
-                    <div class="influencer-item">
-                        <div class="influencer-avatar-wrapper">
-                            <img class="influencer-photo" src="https://hips.hearstapps.com/hmg-prod/images/screen-shot-2020-08-06-at-12-12-16-pm-1596730355.png" alt="Iarray" />
-                            <svg class="verified-check" viewBox="0 0 24 24" fill="none">
-                                <path d="M22.5 12.5C22.5 10.92 21.625 9.55 20.352 8.9C20.547 8.172 20.492 7.375 20.117 6.617C19.742 5.86 19.102 5.273 18.344 4.977C18.203 4.203 17.766 3.492 17.078 3.008C16.391 2.524 15.547 2.329 14.742 2.447C14.18 1.711 13.38 1.25 12.5 1.25C11.62 1.25 10.82 1.711 10.258 2.447C9.453 2.329 8.609 2.524 7.922 3.008C7.234 3.492 6.797 4.203 6.656 4.977C5.898 5.273 5.258 5.86 4.883 6.617C4.508 7.375 4.453 8.172 4.648 8.9C3.375 9.55 2.5 10.92 2.5 12.5C2.5 14.08 3.375 15.45 4.648 16.1C4.453 16.828 4.508 17.625 4.883 18.383C5.258 19.14 5.898 19.727 6.656 20.023C6.797 20.797 7.234 21.508 7.922 21.992C8.609 22.476 9.453 22.671 10.258 22.553C10.82 23.289 11.62 23.75 12.5 23.75C13.38 23.75 14.18 23.289 14.742 22.553C15.547 22.671 16.391 22.476 17.078 21.992C17.766 21.508 18.203 20.797 18.344 20.023C19.102 19.727 19.742 19.14 20.117 18.383C20.492 17.625 20.547 16.828 20.352 16.1C21.625 15.45 22.5 14.08 22.5 12.5Z" fill="#00A8E8"/>
-                                <path d="M11.375 15.375L8.625 12.625L9.875 11.375L11.375 12.875L15.125 9.125L16.375 10.375L11.375 15.375Z" fill="white"/>
-                            </svg>
-                        </div>
-                        <span class="influencer-name">Iarray</span>
-                    </div>
-                    <div class="influencer-item">
-                        <div class="influencer-avatar-wrapper">
-                            <img class="influencer-photo" src="https://brand-innovators.com/wp-content/uploads/2024/01/62d9a4139a886871cf17d8e5_Dobrik-David-scaled.jpg" alt="David Dobrik" />
-                            <svg class="verified-check" viewBox="0 0 24 24" fill="none">
-                                <path d="M22.5 12.5C22.5 10.92 21.625 9.55 20.352 8.9C20.547 8.172 20.492 7.375 20.117 6.617C19.742 5.86 19.102 5.273 18.344 4.977C18.203 4.203 17.766 3.492 17.078 3.008C16.391 2.524 15.547 2.329 14.742 2.447C14.18 1.711 13.38 1.25 12.5 1.25C11.62 1.25 10.82 1.711 10.258 2.447C9.453 2.329 8.609 2.524 7.922 3.008C7.234 3.492 6.797 4.203 6.656 4.977C5.898 5.273 5.258 5.86 4.883 6.617C4.508 7.375 4.453 8.172 4.648 8.9C3.375 9.55 2.5 10.92 2.5 12.5C2.5 14.08 3.375 15.45 4.648 16.1C4.453 16.828 4.508 17.625 4.883 18.383C5.258 19.14 5.898 19.727 6.656 20.023C6.797 20.797 7.234 21.508 7.922 21.992C8.609 22.476 9.453 22.671 10.258 22.553C10.82 23.289 11.62 23.75 12.5 23.75C13.38 23.75 14.18 23.289 14.742 22.553C15.547 22.671 16.391 22.476 17.078 21.992C17.766 21.508 18.203 20.797 18.344 20.023C19.102 19.727 19.742 19.14 20.117 18.383C20.492 17.625 20.547 16.828 20.352 16.1C21.625 15.45 22.5 14.08 22.5 12.5Z" fill="#00A8E8"/>
-                                <path d="M11.375 15.375L8.625 12.625L9.875 11.375L11.375 12.875L15.125 9.125L16.375 10.375L11.375 15.375Z" fill="white"/>
-                            </svg>
-                        </div>
-                        <span class="influencer-name">David Dobrik</span>
-                    </div>
-                    <div class="influencer-item">
-                        <div class="influencer-avatar-wrapper">
-                            <img class="influencer-photo" src="https://theshaderoom.com/wp-content/uploads/2025/03/Skai-Jackson-Calls-Out-Trolls-For-Criticizing-Her-Newborn-Sons-Skin-Complexion-e1742600459941.jpg" alt="Skai Jackson" />
-                            <svg class="verified-check" viewBox="0 0 24 24" fill="none">
-                                <path d="M22.5 12.5C22.5 10.92 21.625 9.55 20.352 8.9C20.547 8.172 20.492 7.375 20.117 6.617C19.742 5.86 19.102 5.273 18.344 4.977C18.203 4.203 17.766 3.492 17.078 3.008C16.391 2.524 15.547 2.329 14.742 2.447C14.18 1.711 13.38 1.25 12.5 1.25C11.62 1.25 10.82 1.711 10.258 2.447C9.453 2.329 8.609 2.524 7.922 3.008C7.234 3.492 6.797 4.203 6.656 4.977C5.898 5.273 5.258 5.86 4.883 6.617C4.508 7.375 4.453 8.172 4.648 8.9C3.375 9.55 2.5 10.92 2.5 12.5C2.5 14.08 3.375 15.45 4.648 16.1C4.453 16.828 4.508 17.625 4.883 18.383C5.258 19.14 5.898 19.727 6.656 20.023C6.797 20.797 7.234 21.508 7.922 21.992C8.609 22.476 9.453 22.671 10.258 22.553C10.82 23.289 11.62 23.75 12.5 23.75C13.38 23.75 14.18 23.289 14.742 22.553C15.547 22.671 16.391 22.476 17.078 21.992C17.766 21.508 18.203 20.797 18.344 20.023C19.102 19.727 19.742 19.14 20.117 18.383C20.492 17.625 20.547 16.828 20.352 16.1C21.625 15.45 22.5 14.08 22.5 12.5Z" fill="#00A8E8"/>
-                                <path d="M11.375 15.375L8.625 12.625L9.875 11.375L11.375 12.875L15.125 9.125L16.375 10.375L11.375 15.375Z" fill="white"/>
-                            </svg>
-                        </div>
-                        <span class="influencer-name">Skai Jackson</span>
-                    </div>
-                    <div class="influencer-item">
-                        <div class="influencer-avatar-wrapper">
-                            <img class="influencer-photo" src="https://s1.ticketm.net/dam/a/41f/feeb5621-0697-4567-a857-e1fa0229141f_TABLET_LANDSCAPE_3_2.jpg" alt="Madison Beer" />
-                            <svg class="verified-check" viewBox="0 0 24 24" fill="none">
-                                <path d="M22.5 12.5C22.5 10.92 21.625 9.55 20.352 8.9C20.547 8.172 20.492 7.375 20.117 6.617C19.742 5.86 19.102 5.273 18.344 4.977C18.203 4.203 17.766 3.492 17.078 3.008C16.391 2.524 15.547 2.329 14.742 2.447C14.18 1.711 13.38 1.25 12.5 1.25C11.62 1.25 10.82 1.711 10.258 2.447C9.453 2.329 8.609 2.524 7.922 3.008C7.234 3.492 6.797 4.203 6.656 4.977C5.898 5.273 5.258 5.86 4.883 6.617C4.508 7.375 4.453 8.172 4.648 8.9C3.375 9.55 2.5 10.92 2.5 12.5C2.5 14.08 3.375 15.45 4.648 16.1C4.453 16.828 4.508 17.625 4.883 18.383C5.258 19.14 5.898 19.727 6.656 20.023C6.797 20.797 7.234 21.508 7.922 21.992C8.609 22.476 9.453 22.671 10.258 22.553C10.82 23.289 11.62 23.75 12.5 23.75C13.38 23.75 14.18 23.289 14.742 22.553C15.547 22.671 16.391 22.476 17.078 21.992C17.766 21.508 18.203 20.797 18.344 20.023C19.102 19.727 19.742 19.14 20.117 18.383C20.492 17.625 20.547 16.828 20.352 16.1C21.625 15.45 22.5 14.08 22.5 12.5Z" fill="#00A8E8"/>
-                                <path d="M11.375 15.375L8.625 12.625L9.875 11.375L11.375 12.875L15.125 9.125L16.375 10.375L11.375 15.375Z" fill="white"/>
-                            </svg>
-                        </div>
-                        <span class="influencer-name">Madison Beer</span>
+                    <div class="step-content">
+                        <div class="step-title">Request your payout anytime and keep playing!</div>
+                        <div class="step-subtitle">(HACK: Upgrade 3 times in 1 game to unlock a $200 cash bonus today!)</div>
                     </div>
                 </div>
             </div>
-        </main>
+
+            <!-- Pro tip -->
+            <div class="pro-tip">
+                <span class="pro-tip-icon">💡</span>
+                <div class="pro-tip-content">
+                    <div class="pro-tip-label">PRO TIP:</div>
+                    <div class="pro-tip-text">Bonus missions (like upgrading in-game) can boost your payout by $1000-$1500/week.</div>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <button class="cta-button" onclick="redirectToApp()">
+                START EARNING NOW
+            </button>
+
+            <!-- Security badge -->
+            <div class="security-badge">
+                <svg class="security-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+                Secure & Confidential
+            </div>
+        </div>
     </div>
 
+    <script>
+        // Live notifications array
+        const notifications = [
+            { name: "Noah1997", action: "bought $5 in Coin Pop spins and made", amount: "$120", time: "28 minutes ago" },
+            { name: "Emma_23", action: "completed Daily Bonus and earned", amount: "$85", time: "12 minutes ago" },
+            { name: "Alex2000", action: "reached level 50 in Solitaire Cash and won", amount: "$200", time: "5 minutes ago" },
+            { name: "Jessica_K", action: "cashed out earnings of", amount: "$340", time: "just now" },
+            { name: "MikeTheGamer", action: "unlocked premium rewards and got", amount: "$150", time: "3 minutes ago" },
+            { name: "Sarah_Lynn", action: "finished tournament and earned", amount: "$95", time: "18 minutes ago" }
+        ];
+
+        let currentIndex = 0;
+
+        // Update live notification
+        function updateNotification() {
+            const notification = notifications[currentIndex];
+            const notificationElement = document.getElementById('liveNotification');
+            
+            // Fade out
+            notificationElement.style.opacity = '0';
+            notificationElement.style.transform = 'translateY(-10px)';
+            
+            setTimeout(() => {
+                // Update content
+                notificationElement.querySelector('.notification-text').innerHTML = `
+                    <span class="notification-highlight">${notification.name}</span> ${notification.action} <span class="notification-highlight">${notification.amount}</span> ~ ${notification.time}
+                `;
+                
+                // Fade in
+                notificationElement.style.transition = 'all 0.3s ease';
+                notificationElement.style.opacity = '1';
+                notificationElement.style.transform = 'translateY(0)';
+                
+                currentIndex = (currentIndex + 1) % notifications.length;
+            }, 300);
+        }
+
+        // Progress bar animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate progress bar
+            setTimeout(() => {
+                const progressBar = document.getElementById('progressBar');
+                progressBar.style.width = '75%';
+            }, 500);
+
+            // Start notification rotation
+            setInterval(updateNotification, 6000);
+        });
+
+        // Function to get source from subdomain
+        function getSourceFromSubdomain() {
+            const hostname = window.location.hostname;
+            const parts = hostname.split('.');
+            
+            // If there's a subdomain (e.g., donima.example.com)
+            if (parts.length > 2) {
+                const subdomain = parts[0];
+                // Get first 3 letters of subdomain
+                return subdomain.substring(0, 3).toLowerCase();
+            }
+            
+            // Default source if no subdomain
+            return 'web';
+        }
+
+        // Redirect function with proper FB Pixel tracking and dynamic source
+        function redirectToApp() {
+            const button = document.querySelector('.cta-button');
+            
+            // Track ViewContent event only on button click
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'ViewContent', {
+                    content_name: 'TesterUP App Download',
+                    content_category: 'App Download'
+                });
+            }
+            
+            // Show loading state
+            button.textContent = 'Redirecting...';
+            button.style.background = '#6b7280';
+            
+            // Get dynamic source from subdomain
+            const source = getSourceFromSubdomain();
+            
+            // Redirect to tracking link with dynamic source
+            setTimeout(() => {
+                window.location.href = `https://rewarrdsgiant.com/aff_c?offer_id=2414&aff_id=1359&source=${source}`;
+            }, 800);
+        }
+    </script>
 </body>
 </html>
