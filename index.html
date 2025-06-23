@@ -506,13 +506,13 @@
             <div class="progress-container">
                 <div class="progress-bar" id="progressBar"></div>
             </div>
-            <p class="progress-text">Complete setup to unlock your earning potential</p>
+            <p class="progress-text">Complete setup to unlock your app testing rewards</p>
         </div>
 
         <!-- Main card -->
         <div class="main-card">
             <!-- Main heading -->
-            <h1 class="main-heading">Follow the instructions to start earning today!</h1>
+            <h1 class="main-heading">Get paid to test and evaluate mobile apps!</h1>
 
             <!-- Steps section -->
             <div class="steps-section">
@@ -523,7 +523,7 @@
                         </svg>
                     </div>
                     <div class="step-content">
-                        <div class="step-title">Download the TesterUp app</div>
+                        <div class="step-title">Download the TesterUp app testing platform</div>
                         <div class="step-subtitle">(Click the button below)</div>
                     </div>
                 </div>
@@ -535,8 +535,8 @@
                         </svg>
                     </div>
                     <div class="step-content">
-                        <div class="step-title">Pick your favorite 3-5 games and level up</div>
-                        <div class="step-subtitle">(Make $700+/day by leveling up in at least 2 games daily)</div>
+                        <div class="step-title">Choose your favorite 3-5 apps to test and evaluate</div>
+                        <div class="step-subtitle">(Make $700+/day by completing tasks in at least 2 apps daily)</div>
                     </div>
                 </div>
 
@@ -547,8 +547,8 @@
                         </svg>
                     </div>
                     <div class="step-content">
-                        <div class="step-title">Request your payout anytime and keep playing!</div>
-                        <div class="step-subtitle">(HACK: Upgrade 3 times in 1 game to unlock a $200 cash bonus today!)</div>
+                        <div class="step-title">Request your payout anytime and keep testing!</div>
+                        <div class="step-subtitle">(HACK: Complete 3 milestones in 1 app to unlock a $200 cash bonus today!)</div>
                     </div>
                 </div>
             </div>
@@ -558,13 +558,13 @@
                 <span class="pro-tip-icon">💡</span>
                 <div class="pro-tip-content">
                     <div class="pro-tip-label">PRO TIP:</div>
-                    <div class="pro-tip-text">Bonus missions (like upgrading in-game) can boost your payout by $1000-$1500/week.</div>
+                    <div class="pro-tip-text">Bonus tasks (like reaching app milestones) can boost your payout by $1000-$1500/week.</div>
                 </div>
             </div>
 
             <!-- CTA Button -->
             <button class="cta-button" onclick="redirectToApp()">
-                START EARNING NOW
+                START TESTING APPS NOW
             </button>
 
             <!-- Security badge -->
@@ -580,12 +580,12 @@
     <script>
         // Live notifications array
         const notifications = [
-            { name: "Noah1997", action: "bought $5 in Coin Pop spins and made", amount: "$120", time: "28 minutes ago" },
-            { name: "Emma_23", action: "completed Daily Bonus and earned", amount: "$85", time: "12 minutes ago" },
-            { name: "Alex2000", action: "reached level 50 in Solitaire Cash and won", amount: "$200", time: "5 minutes ago" },
+            { name: "Noah1997", action: "completed 5 app tasks and earned", amount: "$120", time: "28 minutes ago" },
+            { name: "Emma_23", action: "finished daily challenges and made", amount: "$85", time: "12 minutes ago" },
+            { name: "Alex2000", action: "reached milestone 50 in app testing and earned", amount: "$200", time: "5 minutes ago" },
             { name: "Jessica_K", action: "cashed out earnings of", amount: "$340", time: "just now" },
             { name: "MikeTheGamer", action: "unlocked premium rewards and got", amount: "$150", time: "3 minutes ago" },
-            { name: "Sarah_Lynn", action: "finished tournament and earned", amount: "$95", time: "18 minutes ago" }
+            { name: "Sarah_Lynn", action: "completed app evaluation and earned", amount: "$95", time: "18 minutes ago" }
         ];
 
         let currentIndex = 0;
@@ -650,8 +650,8 @@
             // Track ViewContent event only on button click
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'ViewContent', {
-                    content_name: 'TesterUP App Download',
-                    content_category: 'App Download'
+                    content_name: 'TesterUP App Testing Platform',
+                    content_category: 'App Testing'
                 });
             }
             
