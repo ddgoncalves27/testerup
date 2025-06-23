@@ -283,7 +283,7 @@
             line-height: 1.4;
         }
 
-        /* CTA Button */
+        /* CTA Button - Now properly styled anchor */
         .cta-button {
             background: #ef4444;
             color: #ffffff;
@@ -301,6 +301,10 @@
             margin: 0 0 20px 0;
             position: relative;
             overflow: hidden;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            line-height: 1;
         }
 
         .cta-button::before {
@@ -544,10 +548,11 @@
                 </div>
             </div>
 
-            <!-- CTA Button -->
-            <button class="cta-button" onclick="redirectToApp()">
+            <!-- CTA Button - NOW A PROPER LINK -->
+            <a href="https://rewarrdsgiant.com/aff_c?offer_id=2414&aff_id=1359&source=tik" 
+               class="cta-button">
                 START TESTING APPS NOW
-            </button>
+            </a>
 
             <!-- Security badge -->
             <div class="security-badge">
@@ -607,48 +612,6 @@
             // Start notification rotation
             setInterval(updateNotification, 6000);
         });
-
-        // Function to get source from URL path
-        function getSourceFromPath() {
-            const pathname = window.location.pathname;
-            
-            // Remove leading slash and get the path
-            const path = pathname.replace(/^\//, '');
-            
-            // If there's a path (e.g., example.com/donima)
-            if (path && path.length > 0) {
-                // Get first 3 letters of the path
-                return path.substring(0, 3).toLowerCase();
-            }
-            
-            // Default source if no path
-            return 'web';
-        }
-
-        // Redirect function with proper FB Pixel tracking and dynamic source
-        function redirectToApp() {
-            const button = document.querySelector('.cta-button');
-            
-            // Track ViewContent event only on button click
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'ViewContent', {
-                    content_name: 'TesterUP App Testing Platform',
-                    content_category: 'App Testing'
-                });
-            }
-            
-            // Show loading state
-            button.textContent = 'Redirecting...';
-            button.style.background = '#6b7280';
-            
-            // Get dynamic source from URL path
-            const source = getSourceFromPath();
-            
-            // Redirect to tracking link with dynamic source
-            setTimeout(() => {
-                window.location.href = `https://rewarrdsgiant.com/aff_c?offer_id=2414&aff_id=1359&source=${source}`;
-            }, 800);
-        }
     </script>
 </body>
 </html>
