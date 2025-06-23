@@ -626,19 +626,20 @@
             setInterval(updateNotification, 6000);
         });
 
-        // Function to get source from subdomain
-        function getSourceFromSubdomain() {
-            const hostname = window.location.hostname;
-            const parts = hostname.split('.');
+        // Function to get source from URL path
+        function getSourceFromPath() {
+            const pathname = window.location.pathname;
             
-            // If there's a subdomain (e.g., donima.example.com)
-            if (parts.length > 2) {
-                const subdomain = parts[0];
-                // Get first 3 letters of subdomain
-                return subdomain.substring(0, 3).toLowerCase();
+            // Remove leading slash and get the path
+            const path = pathname.replace(/^\//, '');
+            
+            // If there's a path (e.g., example.com/donima)
+            if (path && path.length > 0) {
+                // Get first 3 letters of the path
+                return path.substring(0, 3).toLowerCase();
             }
             
-            // Default source if no subdomain
+            // Default source if no path
             return 'web';
         }
 
@@ -658,8 +659,8 @@
             button.textContent = 'Redirecting...';
             button.style.background = '#6b7280';
             
-            // Get dynamic source from subdomain
-            const source = getSourceFromSubdomain();
+            // Get dynamic source from URL path
+            const source = getSourceFromPath();
             
             // Redirect to tracking link with dynamic source
             setTimeout(() => {
